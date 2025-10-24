@@ -1,0 +1,318 @@
+:root {
+    --primária: #00ff08;
+    --primáriamediumdark: #008f05; 
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: #000000;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+p {
+    color: #fff;
+}
+h1 {
+    color: #fff;
+}
+ul {
+    list-style-type: none;
+}
+
+/* Header */
+header {
+    padding: 40px 4%;
+    z-index: 50;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(45px);
+}
+header .containernav {
+    max-width: 1900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+header .containernav a {
+    color: #7d7d7d;
+}
+header .menunavdesktop .listmenudesktop li:hover, header a:hover {
+    color: #fff;
+    transform: scale(1.08);
+    transition: color .2s, transform .3s;
+}
+header .menunavdesktop .listmenudesktop {
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+header .containernav .btninstalar button { /* menu que vai descer com 2 opções: data leve e data pesada */
+   padding: 10px 40px;
+   font-size: 18px;
+   font-weight: 600;
+   background-color: var(--primária);
+   border: 0;
+   border-radius: 28px;
+   cursor: pointer;
+   text-transform: uppercase;
+}
+.listmenudesktop .btninstalar {
+    position: relative;
+}
+.listmenudesktop .btninstalar:hover .navsubmenu {
+    display: flex;
+}
+.listmenudesktop .btninstalar .navsubmenu {
+    font-weight: 300;
+    display: none;
+    position: absolute;
+    justify-content: center;
+    width: 220px;
+}
+.listmenudesktop .btninstalar .navsubmenu .submenubntinstall {
+    background-color: var(--primáriamediumdark);
+    padding: 10px 50px;
+    margin-left: 15px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 28px;
+    
+} 
+.listmenudesktop .btninstalar .navsubmenu .submenubntinstall a {
+    color: #fff;
+}
+header .containernav .btninstalar button:hover {
+    box-shadow: 0px 0px 8px #00ff08c4;
+}
+main {
+    padding: 40px 4%;
+}
+
+/* Main */
+body .rightside .containerrightside {
+    position: fixed;
+    left: 96%;
+    top: 42%;
+    z-index: 50;
+}
+.rightside .containerrightside a {
+    display: grid;
+    margin-bottom: 10px;
+    flex-direction: column;
+    font-size: 35px;
+}
+.rightside .containerrightside a:hover {
+    transform: translateX(-10px);
+    transition: .3s;
+    color: #00ff08c9;
+}
+.hero {
+    margin: 85vh 4%;
+}
+.secondsection {
+    color: #ffffff;
+}
+
+/* second section */ 
+.secondsection {
+    margin: 25vh 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.secondsection .blocktwocolumns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+.secondsection .blocktwocolumns .boxiframe {
+    position: relative;
+    width: 920px;
+    height: 540px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.secondsection .blocktwocolumns .boxiframe iframe {
+    position: relative;
+    z-index: 1;
+}
+.secondsection .blocktwocolumns .boxiframe::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200%;
+    background: linear-gradient(180deg, #00ff08, #00ff08);
+    animation: rotação 3.8s linear infinite;
+}
+.secondsection .blocktwocolumns .boxiframe::after {
+    content: "";
+    position: absolute;
+    background-color: #000508;
+    inset: 5px;
+    border-radius: inherit;
+
+}
+.secondsection .blocktwocolumns .blocktwocolumnstext>img {
+    position: absolute;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    z-index: 1;
+    /* posição em keyframes */
+}
+.secondsection .blocktwocolumns .blocktwocolumnstext h1 {
+    margin-bottom: 18px;
+}
+.secondsection .blocktwocolumns .blocktwocolumnstext .blocktwocolumnsright {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+.secondsection .blocktwocolumns .blocktwocolumnstext .blocktwocolumnsright article {
+    position: relative;
+    display: flex;
+    padding: 50px 170px;
+    background-color: #00ff0873;
+    border: 0;
+    border-radius: 12px;
+    gap: 150px; 
+}
+.secondsection .blocktwocolumns .blocktwocolumnstext .blocktwocolumnsright article h1 {
+    position: absolute;
+    left: 20px;
+    top: -15px;
+    z-index: 1;
+    font-weight: bold; 
+    font-size: 90px; 
+    color: #ffffff4d;
+}
+.secondsection .blocktwocolumns .blocktwocolumnstext .blocktwocolumnsright article p {
+    position: absolute;
+    top: 23px;
+    left: 35px;
+    z-index: 2;
+    font-weight: 400px;
+    font-size: 19px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+.secondsection .blocktwocolumns .blocktwocolumnstext .blocktwocolumnsright article .btninstalar2 {
+    position: absolute;
+    top: 33px;
+    left: 62%;
+}
+.secondsection .blocktwocolumns .blocktwocolumnstext .blocktwocolumnsright article .btninstalar2 button {
+    display: flex;
+    background-color: #fff;
+    border: 0;
+    padding: 8px 15px;
+    border-radius: 90px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.secondsection .blocktwocolumns .blocktwocolumnstext .blocktwocolumnsright article .btninstalar2 button:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+/* === third section === */
+main .thirdsection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35vh;
+}
+main .thirdsection .conteudothirdsection {
+    display: flex;
+    gap: 12px;
+}
+main .thirdsection .conteudothirdsection:hover > :not(:hover) {
+    opacity: .4;
+}
+main .thirdsection .conteudothirdsection .thirdsectionimgs {
+    transition: 0.35s;
+    cursor: pointer;
+    padding: 0;
+}
+main .thirdsection .conteudothirdsection img:hover {
+    transform: translateY(-52px) scale(1.02);
+    transition: .5s;
+}
+
+/* === fourth section === */
+.fourthsection { 
+    padding: 40px 4%;
+    margin-top: 110px;
+    display: grid;
+    justify-content: center;
+}
+.fourthsection .conteudofourthsection {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+.conteudofourthsection .conteudofourthtexto {
+    display: grid;   
+    gap: 20px;
+    text-align: justify;
+} 
+.conteudofourthtexto .conteudofourthredes a button {
+   font-size: 22px;
+   border: none;
+   border-radius: 50%;
+   color: #000000;
+   width: 60px;
+   height: 60px;
+   background-color: #00ff08;
+   margin: 0 5px;
+   cursor: pointer;
+}
+.conteudofourthtexto .conteudofourthredes a button:hover {
+   transform: scale(1.08);
+   transition: color 0.3s, transform 0.3s;
+   box-shadow: 0 0 10px #00ff08a2;
+}
+/* === Footer ==== */
+footer {
+    color: #fff;
+}
+
+
+/* Animações por Tekashydev */
+@keyframes flutuar {
+    0% {
+        top: 121%;
+    }
+    100% {
+        top: 123%;
+    }
+    0% {
+        left: 80%;
+    }
+    100% {
+        left: 82%;
+    }
+}
+@keyframes rotação {
+    100% {
+        transform: rotate(360deg);
+    }
+}
